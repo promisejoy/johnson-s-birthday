@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Mr. Johnson Christian</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;900&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Poppins,sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    min-height:100vh;
+    overflow-x:hidden;
+    overflow-y:auto;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px 15px;
+    background:linear-gradient(-45deg,#ff0080,#ff4d4d,#ffcc00,#00d4ff,#7d2cff);
+    background-size:500% 500%;
+    animation:bgMove 15s ease infinite;
+    position:relative;
+}
+
+@keyframes bgMove{
+    0%{background-position:0% 50%;}
+    100%{background-position:100% 50%;}
+}
+
+/* CONTENT */
+
+.container{
+
+    position:relative;
+    z-index:10;
+
+    width:100%;
+    max-width:850px;
+
+    background:rgba(255,255,255,.13);
+    backdrop-filter:blur(18px);
+
+    border:2px solid rgba(255,255,255,.25);
+
+    border-radius:30px;
+
+    padding:40px 30px;
+
+    text-align:center;
+
+    box-shadow:
+    0 25px 60px rgba(0,0,0,.25);
+
+}
+
+.photo{
+
+    width:220px;
+    height:220px;
+
+    margin:auto;
+
+    border-radius:50%;
+    overflow:hidden;
+
+    border:8px solid white;
+
+    box-shadow:
+    0 0 20px gold,
+    0 0 60px hotpink;
+
+    animation:pulse 2.5s infinite;
+
+}
+
+.photo img{
+
+    width:100%;
+    height:100%;
+    object-fit:cover;
+
+}
+
+@keyframes pulse{
+
+0%{
+transform:scale(1);
+}
+
+50%{
+transform:scale(1.05);
+}
+
+100%{
+transform:scale(1);
+}
+
+}
+
+h1{
+
+    margin-top:20px;
+
+    font-family:"Great Vibes",cursive;
+
+    color:white;
+
+    font-size:clamp(1rem,5vw,3rem);
+
+    text-shadow:
+    0 0 10px white,
+    0 0 25px hotpink;
+
+}
+
+h2{
+
+    margin-top:10px;
+
+    color:white;
+
+    font-size:clamp(1.4rem,4vw,2.4rem);
+
+}
+
+p{
+
+    margin:25px auto;
+
+    max-width:700px;
+
+    color:white;
+
+    line-height:1.9;
+
+    font-size:clamp(1rem,2vw,1.25rem);
+
+}
+
+button{
+
+    margin-top:10px;
+
+    padding:15px 40px;
+
+    border:none;
+
+    border-radius:60px;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    color:white;
+
+    cursor:pointer;
+
+    background:linear-gradient(45deg,#ff1493,#ff9800);
+
+    transition:.35s;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+
+}
+
+button:hover{
+
+    transform:translateY(-5px) scale(1.05);
+
+    box-shadow:
+    0 0 25px white,
+    0 15px 35px rgba(0,0,0,.3);
+
+}
+
+.footer{
+
+    margin-top:25px;
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:600;
+
+}
+
+/* FLOWERS */
+
+.flower{
+    position:fixed;
+    top:-100px;
+    z-index:20;
+    pointer-events:none;
+    user-select:none;
+    opacity:.9;
+    animation:flowerFall linear infinite;
+    filter:drop-shadow(0 0 8px rgba(255,255,255,.7));
+}
+
+@keyframes flowerFall{
+
+0%{
+    transform:
+        translate3d(0,-120px,0)
+        rotate(0deg);
+}
+
+25%{
+    transform:
+        translate3d(60px,25vh,0)
+        rotate(120deg);
+}
+
+50%{
+    transform:
+        translate3d(-80px,50vh,0)
+        rotate(240deg);
+}
+
+75%{
+    transform:
+        translate3d(70px,75vh,0)
+        rotate(360deg);
+}
+
+100%{
+    transform:
+        translate3d(-40px,120vh,0)
+        rotate(540deg);
+}
+
+}
+
+.sparkle{
+    position:fixed;
+    width:6px;
+    height:6px;
+    background:white;
+    border-radius:50%;
+    z-index:18;
+    animation:twinkle 2.5s infinite;
+}
+
+@keyframes twinkle{
+
+0%,100%{
+    opacity:0;
+    transform:scale(.3);
+}
+
+50%{
+    opacity:1;
+    transform:scale(2);
+}
+
+}
+
+.confetti{
+    position:fixed;
+    top:-30px;
+    z-index:15;
+    width:10px;
+    height:18px;
+    border-radius:4px;
+    animation:fall linear infinite;
+}
+
+@keyframes fall{
+
+0%{
+    transform:translateY(-50px) rotate(0deg);
+}
+
+100%{
+    transform:translateY(120vh) rotate(720deg);
+}
+
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.container{
+
+padding:30px 20px;
+
+}
+
+.photo{
+
+width:180px;
+height:180px;
+
+}
+
+button{
+
+width:100%;
+
+font-size:18px;
+
+padding:16px;
+
+}
+
+.footer{
+
+font-size:16px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="flowers"></div>
+<div id="confetti"></div>
+<div id="sparkles"></div>
+
+<div class="container">
+
+<div class="photo">
+<img src="IMG-20260706-WA0062.jpg" alt="Johnson Christian">
+</div>
+
+<h1>Happy Birthday</h1>
+
+<h2>🎉 Mr. Johnson Christian 🎉</h2>
+
+<p>
+
+May your birthday be filled with endless joy, laughter,
+love, success, God's abundant blessings and beautiful memories.
+
+Enjoy your special day!
+
+🎂🎁🎉🌸💖
+
+</p>
+
+<button id="musicBtn">
+▶ Play Birthday Song
+</button>
+
+<div class="footer">
+JavaScript Class B ❤️
+</div>
+
+<audio id="music" src="k_-_happy_birthday_to_you_jazzy_(mp3.pm).mp3"></audio>
+
+</div>
+
+<script>
+
+// FLOWERS
+const flowers = document.getElementById("flowers");
+
+const emojis = [
+"🌸","🌺","🌹","🌷","💐","🌻","🌼","🌼","🌸","🌺"
+];
+
+for(let i=0;i<30;i++){
+
+    let f=document.createElement("div");
+
+    f.className="flower";
+
+    f.innerHTML=emojis[Math.floor(Math.random()*emojis.length)];
+
+    f.style.left=Math.random()*100+"vw";
+
+    f.style.fontSize=(20+Math.random()*45)+"px";
+
+    f.style.animationDuration=(8+Math.random()*10)+"s";
+
+    f.style.animationDelay=(-Math.random()*20)+"s";
+
+    flowers.appendChild(f);
+
+}
+
+
+// CONFETTI
+
+const conf=document.getElementById("confetti");
+
+const colors=[
+"#ff0","#0ff","#0f0","#f0f","#fff","#ff6600","#00ffff","#ff1493"
+];
+
+for(let i=0;i<70;i++){
+
+let c=document.createElement("div");
+
+c.className="confetti";
+
+c.style.left=Math.random()*100+"vw";
+
+c.style.background=colors[Math.floor(Math.random()*colors.length)];
+
+c.style.animationDuration=(4+Math.random()*6)+"s";
+
+c.style.animationDelay=Math.random()*5+"s";
+
+conf.appendChild(c);
+
+}
+
+
+// SPARKLES
+
+const spark=document.getElementById("sparkles");
+
+for(let i=0;i<50;i++){
+
+let s=document.createElement("div");
+
+s.className="sparkle";
+
+s.style.left=Math.random()*100+"vw";
+
+s.style.top=Math.random()*100+"vh";
+
+s.style.animationDelay=Math.random()*3+"s";
+
+spark.appendChild(s);
+
+}
+
+
+// MUSIC CONTROL
+
+const audio=document.getElementById("music");
+
+const btn=document.getElementById("musicBtn");
+
+let playing=false;
+
+btn.onclick=function(){
+
+if(!playing){
+
+audio.play();
+
+btn.innerHTML="⏸ Pause Birthday Song";
+
+playing=true;
+
+}else{
+
+audio.pause();
+
+btn.innerHTML="▶ Play Birthday Song";
+
+playing=false;
+
+}
+
+};
+
+</script>
+
+</body>
+</html>
